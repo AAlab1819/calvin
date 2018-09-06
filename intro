@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int yellow,ssgreen,blue,yellowc,bluec,x=0;
+
+
+    cin>>yellowc>>bluec;
+
+    cin>>yellow>>green>>blue;
+
+    if (yellowc<(2*yellow+green))
+    {
+        x=((2*yellow+green)-yellowc);
+    }
+    if (bluec<(green+3*bluec))
+    {
+        x=((green+3*blue)-bluec);
+    }
+    cout<<x;
+    return 0;
+}
