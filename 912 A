@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	long long aa, bb, y, g, bl, a1, a2;
+	cin >> aa >> bb;
+	cin >> y >> g >> bl;
+	a1 = y * 2 + g;
+	a2 = bl * 3 + g;
+	if (a1 - aa < 0)
+		aa = 0;
+	else
+		aa = a1 - aa;
+	if (a2 - bb < 0)
+		bb = 0;
+	else
+		bb = a2 - bb;
+    cout << aa + bb;
+	return 0;
+}
