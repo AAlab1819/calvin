@@ -1,0 +1,20 @@
+#include <iostream>
+#include <set>
+using namespace std;
+
+int main()
+{
+    int k, l, m, n, d;
+    cin>>k>>l>>m>>n>>d;
+    set<int> drgn;
+    for(int i=k; k<=d; k+=i)
+        drgn.insert(k);
+    for(int i=l; l<=d; l+=i)
+        drgn.insert(l);
+    for(int i=m; m<=d; m+=i)
+        drgn.insert(m);
+    for(int i=n; n<=d; n+=i)
+        drgn.insert(n);
+    cout<<drgn.size()<<endl;
+    return 0;
+}
