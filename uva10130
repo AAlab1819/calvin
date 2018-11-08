@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int MAX_WEIGHT=31;
+    int jml = 0, numPpl;
+    int w,nItems, itemW, itemVal;;
+    int bestForWeight[MAX_WEIGHT];
+    int T;
+    cin >> T;
+
+    while (T--)
+    {
+        for (int i = 0; i < MAX_WEIGHT; ++i)
+            bestForWeight[i] = 0;
+
+        cin >> nItems;
+
+        for (int item = 0; item < nItems; ++item)
+        {
+            cin >> itemVal >> itemW;
+
+            for (int w = MAX_WEIGHT - 1; w >= itemW; --w)
+            {
+                bestForWeight[w] = max(bestForWeight[w], bestForWeight[w - itemW] + itemVal);
+            }
+        }
+        cin >> numPpl;
+
+        for (int i = 0; i < numPpl; ++i)
+        {
+            cin >> w;
+            jml += bestForWeight[w];
+        }
+        cout << jml << '\n';
+    }
+    return 0;
+}
